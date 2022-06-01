@@ -52,7 +52,7 @@ function Login() {
                                     <Form.Group >
                                         <Form.Check type="checkbox" label="Salvar as minhas informações neste computador." />
                                     </Form.Group>
-                                    <Link to="/">
+                                    <Link to="/home">
                                         <button style={{ alignItems: 'flex-end' }} type="submit">
                                             Submit
                                         </button>
@@ -63,7 +63,7 @@ function Login() {
 
                         <Card style={{ width: 400, height: 100, marginTop: 5, borderWidth: 5, borderColor: 'white' }}>
                             <p style={{ textAlign: 'center' }}><strong>Ainda não é membro?</strong></p>
-                            <Link to="/" style={{ textAlign: 'center' }} >Entrar já</Link>
+                            <Link to="/home" style={{ textAlign: 'center' }} >Entrar já</Link>
                         </Card>
                     </Col>
 
