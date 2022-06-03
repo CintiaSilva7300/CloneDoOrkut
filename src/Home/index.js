@@ -1,15 +1,12 @@
-import { ButtonBase } from '@mui/material';
+/* eslint-disable react/jsx-no-undef */
+import { ButtonBase, Input } from '@mui/material';
 import React from 'react';
 import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import Img from './Img/IMGCINTIA.jpeg';
+import { FiX } from "react-icons/fi"; import { Link } from 'react-router-dom';
+;
 
 function Home() {
-    // function navgate() {
-    //     return (
-    //         <Link to="/" />
-    //     )
-    // }
-
     return (
         <Container>
             <Navbar href="#home">
@@ -20,49 +17,30 @@ function Home() {
                     className="d-inline-block align-top"
                     alt="React Bootstrap logo"
                 />
-                <ButtonBase style={{
-                    margin: 30,
-                    marginTop: 40,
-                    marginLeft: 45,
-                    width: 70,
-                    height: 35,
-                    backgroundColor: '#7284A0',
-                    borderRadius: 10
-                }}>Home</ButtonBase>
+                <div style={{ padding: 30, margin: 10 }}>
+                    <button style={{ marginLeft: 5, backgroundColor: '#7284A0', border: 0, borderRadius: 10 }}>Home</button>
+                    <button style={{ marginLeft: 5, backgroundColor: '#7284A0', border: 0, borderRadius: 10 }}>Perfil</button>
+                    <button style={{ marginLeft: 5, backgroundColor: '#7284A0', border: 0, borderRadius: 10 }}>Paginas de recados</button>
+                    <button style={{ marginLeft: 5, backgroundColor: '#7284A0', border: 0, borderRadius: 10 }}>Comunidades</button>
+                </div>
 
-                <ButtonBase style={{
-                    margin: 30,
-                    marginTop: 40,
-                    marginLeft: 5,
-                    width: 70,
-                    height: 35,
-                    backgroundColor: '#7284A0',
-                    borderRadius: 10
-                }}>Perfil</ButtonBase>
-
-                <ButtonBase style={{
-                    margin: 30,
-                    marginTop: 40,
-                    marginLeft: 5,
-                    width: 160,
-                    height: 35,
-                    backgroundColor: '#7284A0',
-                    borderRadius: 10
-                }}>Paginas de recados</ButtonBase>
-
-                <ButtonBase style={{
-                    margin: 30,
-                    marginTop: 40,
-                    marginLeft: 5,
-                    width: 110,
-                    height: 35,
-                    backgroundColor: '#7284A0',
-                    borderRadius: 10
-                }}>Comunidades</ButtonBase>
+                <Link to="/">
+                    <button style={{
+                        color: 'red',
+                        backgroundColor: '#7284A0',
+                        border: 0,
+                        borderRadius: 10,
+                        width: 33,
+                        height: 40,
+                        textAlign: 'center',
+                        marginLeft: '1600%'
+                    }} type="submit">
+                        X
+                    </button>
+                </Link>
             </Navbar>
 
             <Row style={{ border: 20 }}>
-
                 <Col md={3}>
                     <Card style={{ width: '17rem', borderWidth: 10, borderColor: 'white' }}>
                         <Card.Img style={{ height: 320 }} variant="top" src={Img} />
@@ -77,15 +55,23 @@ function Home() {
                     </Card>
                 </Col>
 
-
                 <Col md={6}>
                     <Card style={{ width: '35rem' }}>
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
+                            <Card.Title>No que você está pensando?</Card.Title>
+
+                            <Input type='text'
+                                style={{ width: '33rem' }}>
+                            </Input>
+
+                            <ButtonBase style={{
+                                marginTop: 5,
+                                backgroundColor: '#7284A0',
+                                borderRadius: 10,
+                                width: 110,
+                                height: 30,
+                            }}>Publicar
+                            </ButtonBase>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -103,10 +89,7 @@ function Home() {
                     </Card>
                 </Col>
             </Row>
-
         </Container>
-
-
     );
 };
 export default Home;
